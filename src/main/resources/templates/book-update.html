@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update User </title>
+</head>
+<center>
+    <style>
+        body {
+            background: #FFFFE0;
+        }
+    </style>
+<body>
+<form action="#" th:action="@{/book-update}" th:object="${book}" method="post">
+    <label for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    <br/>
+    <label for="name">Name</label>
+    <input type="text" th:field="*{first_name}" id="name" placeholder="Name">
+    <br/>
+    <label for="author">Author</label>
+    <input type="text" th:field="*{last_name}" id="author" placeholder="Author">
+    <br/>
+    <label for="Price">Price</label>
+    <input type="text" th:field="*{price}" id="Price" placeholder="Price">
+    <br/>
+    <input type="submit" value="Update Book">
+</form>
+
+</body>
+</center>
+</html>
